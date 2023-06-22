@@ -1,0 +1,76 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .maindiv {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 10px;
+
+        }
+
+        img {
+            width: 30vw;
+            height: auto;
+        }
+
+        .one,
+        .two {
+            color: rgb(66, 66, 66);
+
+        }
+        /* .two{
+            display: none;
+        } */
+
+        @media only screen and (max-width: 767px) {
+            img {
+                width: 70vw;
+                height: auto;
+
+            }
+            /* .one{
+                display: none;
+            } */
+            .two{
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body style="margin: 0;">
+    <div class="maindiv">
+        <img src="https://amirthafashions.s3.ap-south-1.amazonaws.com/images/1687413382765-Asset%203Cust%201.png"
+            alt=""><br>
+        <div class="one">
+            <h1>Launching Soon . . .</h1 style="">
+        </div>
+        <!-- <div class="two">
+            <h1>Launching <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Soon . . .</h1 style="">
+        </div> -->
+
+
+    </div>
+    <script>
+        // Optionally, you can use JavaScript to delay the animation start
+        // for a certain period of time, e.g., 1 second.
+        setTimeout(() => {
+            const words = document.querySelectorAll('#falling-words span');
+            words.forEach((word, index) => {
+                // Set animation delay for each word
+                word.style.animationDelay = `${index * 0.5}s`;
+            });
+        }, 1000);
+
+    </script>
+</body>
+
+</html>
